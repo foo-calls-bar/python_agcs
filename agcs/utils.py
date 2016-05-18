@@ -6,8 +6,8 @@ from string import ascii_letters as _letters
 from string import digits as _digits
 
 __all__ = [
-    'num_cpus', 'get_ip',
-    'Puser', 'Pgroup',
+    'random_string', 'num_cpus',
+    'get_ip', 'Puser', 'Pgroup',
 ]
 
 def random_string(length=12, chars=_letters+_digits):
