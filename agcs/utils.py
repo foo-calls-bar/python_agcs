@@ -1,11 +1,19 @@
 import socket
 import os
 import pwd, grp
+import random
+from string import ascii_letters as _letters
+from string import digits as _digits
 
 __all__ = [
     'num_cpus', 'get_ip',
     'Puser', 'Pgroup',
 ]
+
+def random_string(length=12, chars=_letters+_digits):
+    return ''.join(
+        random.choice(chars) for i in range(length)
+    )
 
 def num_cpus():
     return hasattr(os, 'sysconf') and (
