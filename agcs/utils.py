@@ -64,10 +64,6 @@ class Puser(object):
             self._pwd = pwd.getpwuid(os.getuid())
 
     @property
-    def pwd(self):
-        return self._pwd
-
-    @property
     def name(self):
         return self._pwd.pw_name
 
@@ -95,17 +91,13 @@ class Pgroup:
             self._grp = grp.getgrgid(os.getgid())
 
     @property
-    def grp(self):
-        return self._grp
-
-    @property
     def name(self):
         return self._grp.gr_name
 
     @property
     def id(self):
-        return self._pwd.gr_gid
+        return self._grp.gr_gid
 
     @property
     def mem(self):
-        return self._pwd.gr_mem
+        return self._grp.gr_mem
