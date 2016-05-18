@@ -3,7 +3,7 @@ import os
 import pwd, grp
 
 __all__ = [
-    'num_cpus', 'get_ip'
+    'num_cpus', 'get_ip',
     'Puser', 'Pgroup',
 ]
 
