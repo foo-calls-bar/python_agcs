@@ -16,10 +16,12 @@ def random_string(length=12, chars=_letters+_digits):
     )
 
 def num_cpus():
-    return hasattr(os, 'sysconf') and (
-        os.sysconf('SC_NPROCESSORS_ONLN')
-    ) or 1
-
+    try:
+        from multiprocessing import cpu_count
+        return cpu_count()
+    except NotImplementedError as e:
+        print(e.message)
+        return 1
 
 def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
