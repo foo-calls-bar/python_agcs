@@ -5,7 +5,7 @@ setup(name='agcs_utils',
     description='Python3 user and utils module',
     author='Ryan Kaiser',
     author_email='ryank@alphageekcs.com',
-    download_url='https://github.com/ryankaiser/python_agcs/archive/v3.tar.gz',
+    download_url='https://github.com/ryankaiser/python_agcs/archive/v3.0.1.tar.gz',
     packages=['agcs_utils']
 )
 
